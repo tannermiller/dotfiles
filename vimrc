@@ -2,6 +2,8 @@ set showcmd
 
 set nocompatible
 
+set nowrap
+
 set hidden
 
 set tabstop=4
