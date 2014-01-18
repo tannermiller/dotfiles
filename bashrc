@@ -13,3 +13,5 @@ PS1='[\u@\h \W]\$ '
 source ~/.git-completion.sh
 
 export PATH=$PATH:~/.cabal/bin
+
+set -o vi
