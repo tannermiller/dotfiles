@@ -6,12 +6,15 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias ll='ls -l'
 PS1='[\u@\h \W]\$ '
 
-# get this file from https://github.com/git/git/blob/master/contrib/completion/git-completion.bash
-source ~/.git-completion.sh
+alias grep="/usr/bin/grep --color=auto --exclude=*.pyc"
+unset GREP_OPTIONS
 
-export PATH=$PATH:~/.cabal/bin
+function grepp() {
+  find . -name \*.py | xargs grep -n "$@"
+}
 
 set -o vi
+
+alias ll='ls -al'
