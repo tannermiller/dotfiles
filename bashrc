@@ -1,20 +1,11 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+alias ll='ls -al'
 
-alias grep="/usr/bin/grep --color=auto --exclude=*.pyc"
-unset GREP_OPTIONS
-
-function grepp() {
-  find . -name \*.py | xargs grep -n "$@"
-}
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 
 set -o vi
 
-alias ll='ls -al'
+source $HOME/.cargo/env
+
+source ~/.git-completions.bash
