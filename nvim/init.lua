@@ -15,7 +15,7 @@ vim.keymap.set("", "<C-x>", "<C-w>x")
 vim.keymap.set("", "<leader><space>", ":noh<cr>")
 
 -- lsp config
-vim.keymap.set("s", "gd", vim.lsp.buf.definition)
+vim.keymap.set("", "gd", vim.lsp.buf.definition)
 vim.lsp.inlay_hint.enable(true)
 
 -- other options
